@@ -5,7 +5,7 @@ Opis
 ----
 Aplikacija, ki omogoča vnašanje računov, izvoz v .pdf formatu in 
 vodenje knjige računov v .csv formatu. Primera izvoženega računa in knjige 
-računov se nahajata v mapi 'files'.
+računov se nahajata v mapi 'docs'.
 
 Opombe
 ------
