@@ -154,7 +154,7 @@ class DataRecordForm(ttk.Frame):
         opis_input = self._vars['Opis storitve'].get()
         znesek_input = self._vars['Znesek'].get()
 
-        stevilka_racuna = f"DG{datetime.today().strftime('%y')}-{('0' * (3 - len(stevilka_racuna_input))) + stevilka_racuna_input}"
+        stevilka_racuna = f"JN{datetime.today().strftime('%y')}-{('0' * (3 - len(stevilka_racuna_input))) + stevilka_racuna_input}"
         naslov_split = naslov.split(', ')
         sklic = f'{stevilka_racuna[2:]}'
         opis = opis_input + (' ' * (41 - len(opis_input)))
