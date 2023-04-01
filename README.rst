@@ -9,6 +9,7 @@ vodenje knjige računov v .csv formatu.
 Opombe
 ------
 * Pri vnašanju podatkov, je naslov potrebno vnesti v formatu:
+
   - Ulica 12, 1000 Mesto
 
 * Datume je potrebno vnesti v formatu dd.mm.yyyy
