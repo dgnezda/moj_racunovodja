@@ -17,7 +17,7 @@ Račun št. avto.JNYY-###
                                                Valuta:  EUR
                                           Kraj izdaje:  Ljubljana
                             Datum opravljene storitve:  VNOS
-                                     Datum zapadlosti:  datetime.today + 30 dni
+                                     Datum zapadlosti:  datetime.today() + 14 dni
                                                 Sklic:  avto.YY-###
                                           Koda namena:  OTHR
 

@@ -1,0 +1,3 @@
+Št. računa,Naziv,Naslov,Davčna številka,Matična številka,Opis storitve,Datum izdaje,Datum opravljene storitve,Datum zapadlosti,Znesek,Opomba
+1,Bedanec Podgorski,"Gozdna pot 12, 1234 Hosta",SI12344123,12121212,Pašnja ovac,05.04.2023,05.04.2023,19.04.2023,"123,45",bedanec
+2,Rožle Podhostnik,"Na jasi 23, 1233",23455234,12121212234,Delo na črno,05.04.2023,05.04.2023,19.04.2023,"23,45",rozle

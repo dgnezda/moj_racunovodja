@@ -1,8 +1,10 @@
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
+from datetime import datetime
 from . import views as v
 from . import models as m
+from . import settings as s
 
 
 class Application(tk.Tk):
@@ -29,12 +31,9 @@ class Application(tk.Tk):
 
         self._records_saved = 0
 
-    def _on_save_pdf(self, *_):
-        data = self.recordform.get()
-        self.pdf.save_pdf(data)
-
     def _on_save(self, *_):
         """Handles save button clicks"""
+        
         """
         errors = self.recordform.get_errors()
         if errors:
@@ -49,24 +48,23 @@ class Application(tk.Tk):
             return False
         """
         data = self.recordform.get()
+
         self.model.save_record(data)
         self._records_saved += 1
         self.status.set(f"Shranjenih je bilo {self._records_saved} računov.")
         
         stevilka_racuna = self.recordform.get_stevilka_racuna()
-
+        opomba = self.recordform.get_naslov_racuna()
+        
         pdf = m.PDFModel(stevilka_racuna)
-
-        racun_string = self.recordform.get_racun_string()
+        
+        racun_string = pdf.get_racun_string(data)
         pdf.add_page()
         pdf.set_font_size(9.5)
         pdf.ln(5)
         pdf.multi_cell(0, 4, racun_string, border = 0, align = 'L')
-        #with open("pdf_ex.rst", 'r', encoding="UTF-8") as f:
-        #    for line in f.readlines():
-        #        pdf.cell(0, 4, line[:-1], new_x="LMARGIN", new_y="NEXT")
-        pdf.image("files/podpis.png", 30, 230, 45)
-        pdf.output(f"racun_st.{stevilka_racuna}.pdf")
+        pdf.image(s.user['signature'], 30, 230, 45)
+        pdf.output(f"racun_st_{pdf.get_sifra_racuna()}_{opomba}.pdf")
         
         self.recordform.reset()
         
