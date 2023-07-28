@@ -9,6 +9,7 @@ v mapi 'docs'.
 
 Opombe/uporaba
 --------------
+* CHECK README-ENG.MD FOR ENGLISH VERSION OF README FILE
 * Pri vnašanju podatkov je naslov prejemnika potrebno vnesti v sledečem formatu:
 
   - Ulica 12, 1000 Mesto 
